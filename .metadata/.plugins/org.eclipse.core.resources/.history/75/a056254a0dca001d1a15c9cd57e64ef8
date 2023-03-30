@@ -1,0 +1,34 @@
+package com.examples.S01springcoreapp;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        //traditional approach
+        
+//        Employee emp = new Employee();
+//        emp.setId(1);
+//        emp.setName("Alex");
+//        System.out.println(emp);
+        
+        // creating spring container
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/examples/S01springcoreapp/springconfig.xml");
+        
+        // ask container for employee bean
+        
+        Employee emp = (Employee) ctx.getBean("emp");
+        System.out.println(emp);
+    }
+    
+   
+    
+    
+}

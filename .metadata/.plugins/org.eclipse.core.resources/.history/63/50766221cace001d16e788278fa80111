@@ -1,0 +1,32 @@
+package com.examples.S08SpringMVCORMDemo.services;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.examples.S08SpringMVCORMDemo.dao.UserDao;
+import com.examples.S08SpringMVCORMDemo.entity.User;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserDao userdao;
+	
+	
+	@Override
+	@Transactional
+	public int save(User user) {
+		return userdao.create(user);
+	}
+
+
+	@Override
+	public List<User> getUsers() {
+		return userdao.findUsers();
+	}
+   
+}

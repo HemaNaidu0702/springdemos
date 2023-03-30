@@ -1,0 +1,5 @@
+package com.examples.S05SpringjdbcDemo.entity;
+
+public class Employee {
+
+}

@@ -1,0 +1,19 @@
+package com.examples.S08SpringMVCORMDemo.services;
+
+import org.springframework.stereotype.Service;
+
+import com.examples.S08SpringMVCORMDemo.dao.userdao;
+import com.examples.S08SpringMVCORMDemo.entity.User;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	private UserDao userdao;
+	
+	
+	@Override
+	public int save(User user) {
+		return userdao.create(user);
+	}
+   
+}

@@ -1,0 +1,16 @@
+package com.examples.S06SpringOrmDemo1.dao;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+import com.examples.S06SpringOrmDemo1.entity.Product;
+
+public class ProductDaoImpl {
+  
+	HibernateTemplate hibernateTemplate;
+	
+	
+	public int create(Product product) {
+		Integer result = (Integer) hibernateTemplate.save(product);
+		return result;
+	}
+}

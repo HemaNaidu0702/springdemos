@@ -1,0 +1,22 @@
+package com.examples.S06SpringOrmDemo1.dao;
+
+import javax.transaction.Transactional;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Component;
+
+import com.examples.S06SpringOrmDemo1.entity.Product;
+
+
+@Component("productdao")
+public class ProductDaoImpl implements ProductDao{
+  
+	HibernateTemplate hibernateTemplate;
+	
+	@Override
+	@Transactional
+	public int create(Product product) {
+		Integer result = (Integer) hibernateTemplate.save(product);
+		return result;
+	}
+}

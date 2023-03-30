@@ -1,0 +1,9 @@
+package com.examples.S08SpringMVCORMDemo.dao;
+
+import com.examples.S08SpringMVCORMDemo.entity.User;
+
+public class UserDao {
+
+	int create(User user); 
+
+}

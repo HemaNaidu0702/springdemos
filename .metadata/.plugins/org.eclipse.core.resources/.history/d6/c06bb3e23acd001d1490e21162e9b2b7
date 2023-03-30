@@ -1,0 +1,5 @@
+package com.examples.S06SpringOrmDemo1.dao;
+
+public class ProductDaoImpl {
+
+}

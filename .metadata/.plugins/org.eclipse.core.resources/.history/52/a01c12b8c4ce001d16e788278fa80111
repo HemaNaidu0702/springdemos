@@ -1,0 +1,9 @@
+package com.examples.S08SpringMVCORMDemo.services;
+
+import com.examples.S08SpringMVCORMDemo.entity.User;
+
+public interface UserService {
+
+	int save(User user); 
+
+}

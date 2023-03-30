@@ -1,0 +1,5 @@
+package com.examples.S04InterfaceInjection;
+
+public class OrderDAO {
+     void createOrder();
+}

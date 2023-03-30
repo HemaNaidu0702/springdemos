@@ -1,0 +1,27 @@
+package com.examples.S03stereotypes;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
+public class Employee {
+ 
+@Value("Chennai")
+private String city;
+
+@Value("TN")
+private String state;
+
+@Value("876798")
+private String pincode;
+
+@Override
+public String toString() {
+	return "Employee [city=" + city + ", state=" + state + ", pincode=" + pincode + "]";
+}
+}
+
+

@@ -1,0 +1,65 @@
+package com.examples.S05SpringjdbcDemo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.examples.S05SpringjdbcDemo.dao.EmployeeDAO;
+import com.examples.S05SpringjdbcDemo.entity.Employee;
+
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        //create();
+        update();
+        //delete();
+    }
+
+	private static void create() {
+		System.out.println( "JDBC Template Demo" );
+        
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/examples/S05SpringjdbcDemo/springconfig.xml");
+        
+        EmployeeDAO employeeDao =(EmployeeDAO) ctx.getBean("employeedao");
+        
+        Employee emp = new Employee();
+        
+        emp.setId(2);
+        emp.setFirstName("Raj");
+        emp.setLastName("Koothrapalli");
+        
+        employeeDao.create(emp);
+	}
+	
+	private static void update() {
+		System.out.println( "JDBC Template Demo" );
+        
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/examples/S05SpringjdbcDemo/springconfig.xml");
+        
+        EmployeeDAO employeeDao =(EmployeeDAO) ctx.getBean("employeedao");
+        
+        Employee emp = new Employee();
+        
+        emp.setId(2);
+        emp.setFirstName("Raj");
+        emp.setLastName("Ramayan");
+        
+        employeeDao.update(emp);
+	}
+	
+	private static void delete() {
+		System.out.println( "JDBC Template Demo" );
+        
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/examples/S05SpringjdbcDemo/springconfig.xml");
+        
+        EmployeeDAO employeeDao =(EmployeeDAO) ctx.getBean("employeedao");
+        
+       
+        
+        employeeDao.delete(2);
+	}
+}

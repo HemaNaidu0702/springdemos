@@ -1,0 +1,13 @@
+package com.examples.S04InterfaceInjection;
+
+import org.springframework.stereotype.Component;
+
+@Component("orderdaooracle")
+public class OrderDaoOracleimpl {
+	   @Override	
+		public void createOrder(){
+			System.out.println("Open connection to Oracle DB");
+			System.out.println("Run insert statement on Oracle DB");
+			System.out.println("Order created in Oracle DB");
+		}
+}

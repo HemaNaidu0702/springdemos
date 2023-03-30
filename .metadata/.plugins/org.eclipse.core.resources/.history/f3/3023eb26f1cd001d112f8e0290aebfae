@@ -1,0 +1,5 @@
+package com.examples.S07SpringMVCDemo;
+
+public class HelloController {
+
+}

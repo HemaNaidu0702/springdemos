@@ -1,0 +1,31 @@
+package com.examples.S07SpringMVCDemo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.examples.S07SpringMVCDemo.model.User;
+
+@Controller
+public class UserController {
+  
+	@RequestMapping("/register")
+	public ModelAndView showRegistrationPage() {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("registeruser");
+		return mv;
+	}
+	
+	@RequestMapping(value="/signupuser", method=RequestMethod.POST)
+	public ModelAndView SignupUser(@ModelAttribute("user") User user) {
+		System.out.println("From Ui. Retrieved object from spring container");
+		ModelAndView modelView = new ModelAndView();
+	    modelView.addObject("user", user);
+	    modelView.setViewName("registeruserresult");
+		
+		return modelView;
+	}
+}

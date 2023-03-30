@@ -1,0 +1,12 @@
+package com.examples.S08SpringMVCORMDemo.dao;
+
+import com.examples.S08SpringMVCORMDemo.entity.User;
+
+public class userdao {
+
+	public static int create(User user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

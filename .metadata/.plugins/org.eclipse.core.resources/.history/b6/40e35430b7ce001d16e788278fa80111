@@ -1,0 +1,12 @@
+package com.examples.S08SpringMVCORMDemo.services;
+
+import com.examples.S08SpringMVCORMDemo.entity.User;
+
+public class UserService {
+
+	public int save(User user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
